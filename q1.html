@@ -1,0 +1,35 @@
+<!--q1.html - applesandbeer -->
+
+
+<script type="text/javascript">
+
+
+var Num1 =  prompt("what number?");
+var answer = [];
+var counter = 0;
+for (var i = 1; i < Num1; i++) {
+	
+	var mult3 = i%3;
+	
+	var mult5 = i%5;
+	
+	if (mult3 == 0 || mult5 == 0){
+		answer.push(i);
+		counter = counter + 1;
+	}
+	
+
+};
+document.write("array of multiples:" + answer + "<br /><br /><br />");
+
+var product = 0;
+
+for (var j = 0; j < counter; j++) {
+	
+	product = answer[j] + product;
+};
+document.write("Sum of multiples: " + product);
+
+
+
+</script>
