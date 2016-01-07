@@ -1,0 +1,59 @@
+<!--q1.html - applesandbeer -->
+
+
+<script type="text/javascript">
+
+//setting a limit for for loop just in case
+var Num1 =  1000;
+
+//arrays for sequence, and one for just even numbers
+var answer = [];
+var sumofEven = [];
+
+for (var i = 0; i < Num1; i++ ) {
+	if (i == 0){
+		
+		answer.push(1);
+		
+	} else if (i == 1){
+
+		answer.push(2);
+		sumofEven.push(2);
+
+	} else if (i == 2){
+		answer.push(3)
+
+	} else {
+		var indexBefore = i-1;
+		var indexBeforeBefore = i-2;
+		var sum = answer[indexBefore] + answer[indexBeforeBefore];
+		
+		if(answer[indexBefore] > 4000000){
+			break;
+		}
+		if(sum % 2 == 0){
+			sumofEven.push(sum);
+
+					
+		}
+		answer.push(sum);
+		
+		
+	}
+
+}	
+//output just even numbers
+document.write(sumofEven);
+
+//adding all numbers in sumofEven
+var arrayLength = sumofEven.length;
+var EvenSum = 0;
+for(var p = 0; p < arrayLength; p ++){
+	EvenSum = EvenSum + sumofEven[p];
+
+}
+
+document.write("<br /> Sum is:" + EvenSum);
+
+
+</script>
