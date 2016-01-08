@@ -1,0 +1,46 @@
+<!--q3.html - applesandbeer -->
+<script type="text/javascript">
+var number = 100;
+
+var factors = [];
+var primes = [];
+
+
+
+
+
+for(var j = 0; j<number; j++){
+	if(number%j == 0){
+		factors.push(j);
+
+
+	}
+
+}
+// document.write(factors[4] + " <br />");
+// document.write(factors);
+document.write(factors + "<br />");
+
+//check all numbers in factors for primeness
+for(var q = 0; q < factors.length; q++){
+	var current = factors[q];
+	//document.write(current + "<br />");
+	for (var i = 2; i < current/2; i++){
+		if(current%i == 0){
+			break;
+
+		} else  {
+			
+				primes.push(current);
+
+		}
+	}
+
+	//Primer(current);
+}
+ document.write(primes);
+
+
+
+
+</script>

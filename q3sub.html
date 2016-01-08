@@ -1,0 +1,28 @@
+<script type="text/javascript">
+var isPrime = function (n) {
+    var i;
+
+	for (i = 2; i < n; i++) {
+		if (n%i==0) {
+			return false;
+		}
+	}
+	return true;
+};
+
+
+
+var maxPrimeFactor = function (n) {
+	var d = n-1;
+
+	while (d > 1) {
+		if (n%d==0 && isPrime(d)) {
+			return d;
+		}
+		d--;
+	}
+	return n;
+};
+
+document.write(maxPrimeFactor(1000));
+</script>
